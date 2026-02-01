@@ -26,4 +26,7 @@ public abstract class Asset {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public abstract String getType();
+
 }

@@ -15,4 +15,10 @@ public class Stock extends Asset{
     public void setMarket(String market) {
         this.market = market;
     }
+
+    @Override
+    public String getType() {
+        return "Stock";
+    }
+
 }

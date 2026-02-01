@@ -1,10 +1,12 @@
 package org.example;
 
 public class Person {
-    private static int id =1;
+    private  int id ;
+    private static int idCounter = 1;
     private String nom;
 
     public Person(String nom) {
+        this.id = idCounter++;
         this.nom = nom;
     }
 
@@ -14,5 +16,9 @@ public class Person {
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+
+    public int getId() {
+        return id;
     }
 }

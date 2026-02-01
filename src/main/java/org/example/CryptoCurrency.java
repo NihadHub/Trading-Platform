@@ -8,11 +8,13 @@ public class CryptoCurrency extends Asset{
         Type = type;
     }
 
-    public String getType() {
-        return Type;
-    }
-
     public void setType(String type) {
         Type = type;
     }
+
+    @Override
+    public String getType() {
+        return "Crypto";
+    }
+
 }

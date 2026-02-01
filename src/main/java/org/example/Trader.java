@@ -4,10 +4,9 @@ public class Trader extends Person{
     private double Solde;
     private Portfolio <Asset> portfolio;
 
-    public Trader(String nom, double solde, Portfolio<Asset> portfolio) {
+    public Trader(String nom, double solde) {
         super(nom);
         Solde = solde;
-        this.portfolio = portfolio;
     }
 
     public double getSolde() {
@@ -19,6 +18,11 @@ public class Trader extends Person{
         Solde = solde;
     }
 
+    public Portfolio<Asset> getPortfolio() {
+        return portfolio;
+    }
 
-
+    public void setPortfolio(Portfolio<Asset> portfolio) {
+        this.portfolio = portfolio;
+    }
 }

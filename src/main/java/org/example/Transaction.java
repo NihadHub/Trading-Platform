@@ -6,13 +6,13 @@ public class Transaction {
     private String type;
     private int quantite;
     private double price;
-    private LocalDateTime date;
 
-    public Transaction(String type, int quantite, double price, LocalDateTime date) {
+
+    public Transaction(String type, int quantite, double price) {
         this.type = type;
         this.quantite = quantite;
         this.price = price;
-        this.date = date;
+
     }
 
     public String getType() {
@@ -27,7 +27,5 @@ public class Transaction {
         return price;
     }
 
-    public LocalDateTime getDate() {
-        return date;
-    }
+
 }
