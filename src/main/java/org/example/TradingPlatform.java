@@ -71,12 +71,10 @@ public class TradingPlatform {
             System.out.println("Trader introuvable");
             return;
         }
-
         if (traderTrouve.getPortfolio() != null) {
             System.out.println(" Ce trader possède déjà un portfolio");
             return;
         }
-
         Portfolio p = new Portfolio(id);
         traderTrouve.setPortfolio(p);
 
@@ -123,7 +121,7 @@ public class TradingPlatform {
 
         transactions.add(new Transaction("ACHAT", qte, a.getPrice()));
 
-        System.out.println("✅ Achat effectué");
+        System.out.println(" Achat effectué");
 
     }
 
@@ -143,14 +141,14 @@ public class TradingPlatform {
         Asset a = findAsset(code);
 
         if (t == null || a == null || t.getPortfolio() == null) {
-            System.out.println("❌ Données invalides");
+            System.out.println(" Données invalides");
             return;
         }
 
         int qteDispo = t.getPortfolio().getActifs().getOrDefault(a, 0);
 
         if (qteDispo < qte) {
-            System.out.println("❌ Quantité insuffisante");
+            System.out.println(" Quantité insuffisante");
             return;
         }
 
@@ -159,14 +157,7 @@ public class TradingPlatform {
 
         transactions.add(new Transaction("VENTE", qte, a.getPrice()));
 
-        System.out.println("✅ Vente effectuée");
-
-
-
-
-
-
-
+        System.out.println(" Vente effectuée");
 
     }
 
@@ -179,7 +170,7 @@ public class TradingPlatform {
         Trader t = findTrader(id);
 
         if (t == null || t.getPortfolio() == null) {
-            System.out.println("❌ Portfolio introuvable");
+            System.out.println(" Portfolio introuvable");
             return;
         }
 
@@ -195,6 +186,7 @@ public class TradingPlatform {
             System.out.println(tr);
         }
     }
+
     private Trader findTrader ( int id){
         for (Trader t : traders) {
             if (t.getId() == id)
